@@ -256,7 +256,6 @@ var vm = new Vue({
     },
 
     useTheme: function() {
-      // _hmt.push(['_trackEvent', 'theme-builder', 'useTheme', vm.themeName]);
       $('#js-code').text(getExportJsFile());
       $('#json-code').text(JSON.stringify(getTheme(true), null, '    '));
       // code highlighting
@@ -265,12 +264,10 @@ var vm = new Vue({
     },
 
     downloadThemeJson: function() {
-      // _hmt.push(['_trackEvent', 'theme-builder', 'download', 'json']);
       saveJsonFile(getTheme(true), (vm.themeName || 'customed') + '.json');
     },
 
     downloadThemeJs: function() {
-      // _hmt.push(['_trackEvent', 'theme-builder', 'download', 'js']);
       saveJsFile(getExportJsFile(), (vm.themeName || 'customed') + '.js');
     },
 
